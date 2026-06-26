@@ -1,0 +1,37 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+
+  
+  <circle cx="240" cy="240" r="240" fill="#8C2F39"></circle>
+  
+  <circle cx="240" cy="240" r="212" fill="none" stroke="#E1E6E1" stroke-width="2.5" opacity="0.55"></circle>
+
+  
+  <path id="arcTop" d="M 85 240 A 155 155 0 0 1 395 240" fill="none"></path>
+
+  
+  <path id="arcBot" d="M 65 240 A 175 175 0 0 0 415 240" fill="none"></path>
+
+  
+  <text fill="#E1E6E1" font-family="Arial, sans-serif" font-size="38" font-weight="700" style="font-kerning:none; font-feature-settings:&#39;kern&#39; 0; letter-spacing:7px">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">LA TAVERNE</textPath>
+  </text>
+
+  
+  <text fill="#E1E6E1" font-family="Arial, sans-serif" font-size="38" font-weight="700" style="font-kerning:none; font-feature-settings:&#39;kern&#39; 0">
+    <textPath href="#arcBot" startOffset="50%" text-anchor="middle" textLength="220" lengthAdjust="spacing">ROYALE</textPath>
+  </text>
+
+  
+  <g fill="#E1E6E1">
+    <path d="M 138 302&#xA;             L 148 212&#xA;             L 170 249&#xA;             L 193 198&#xA;             L 216 242&#xA;             L 240 172&#xA;             L 264 242&#xA;             L 287 198&#xA;             L 310 249&#xA;             L 332 212&#xA;             L 342 302 Z"></path>
+    <circle cx="148" cy="208" r="9"></circle>
+    <circle cx="193" cy="194" r="9"></circle>
+    <circle cx="240" cy="168" r="10"></circle>
+    <circle cx="287" cy="194" r="9"></circle>
+    <circle cx="332" cy="208" r="9"></circle>
+    <rect x="128" y="312" width="224" height="5"></rect>
+    <circle cx="128" cy="314.5" r="7"></circle>
+    <circle cx="352" cy="314.5" r="7"></circle>
+  </g>
+
+</svg>

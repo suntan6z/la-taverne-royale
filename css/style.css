@@ -1,0 +1,220 @@
+/* ===== La Taverne Royale - Charte graphique =====
+   Palette officielle (fiche identité, section 7.2) :
+   - Bordeaux (Stiletto)      #8C2F39  couleur principale
+   - Noir                     #000000  texte courant
+   - Gris clair (Gray Nurse)  #E1E6E1  fonds clairs / surfaces
+   - Bleu (Matisse)           #2176AE  accent (navbar, footer, liens), a utiliser avec parcimonie
+*/
+
+/* ===== Polices en local (pas de CDN Google Fonts) ===== */
+
+@font-face {
+  font-family: 'Pirata One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/pirata-one-v23-latin-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../assets/fonts/roboto-condensed-v31-latin-variable.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/roboto-condensed-v31-latin-italic-variable.woff2') format('woff2');
+}
+
+:root {
+  --tr-bordeaux: #8C2F39;
+  --tr-bordeaux-hover: #7a2530; /* teinte plus sombre, calculee pour le survol des boutons (non presente dans la fiche identite) */
+  --tr-noir: #000000;
+  --tr-gris-clair: #E1E6E1;
+  --tr-bleu: #2176AE;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: var(--tr-gris-clair);
+  color: var(--tr-noir);
+}
+
+.font-titre {
+  font-family: 'Pirata One', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Bandeau décoratif */
+.bandeau-deco {
+  height: 20px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--tr-bordeaux) 0,
+    var(--tr-bordeaux) 18px,
+    var(--tr-bordeaux-hover) 18px,
+    var(--tr-bordeaux-hover) 36px
+  );
+}
+
+/* Navbar - le bleu est un accent, utilise uniquement ici et dans le footer */
+.navbar-taverne {
+  background-color: var(--tr-bleu);
+}
+
+.navbar-taverne .nav-link {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.82);
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s;
+}
+
+.navbar-taverne .nav-link:hover,
+.navbar-taverne .nav-link.active {
+  color: #fff;
+}
+
+.navbar-taverne .nav-link.active {
+  border-bottom-color: rgba(255, 255, 255, 0.9);
+}
+
+.sous-titre-nav {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-reserver {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--tr-bordeaux);
+  color: #fff;
+  padding: 10px 18px;
+  transition: background 0.2s;
+}
+
+.btn-reserver:hover {
+  background-color: var(--tr-bordeaux-hover);
+  color: #fff;
+}
+
+/* Hero */
+.hero-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-page img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(140, 47, 57, 0.72); /* var(--tr-bordeaux) en transparence */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 36px 60px;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+}
+
+/* Sections */
+.section-claire {
+  background-color: var(--tr-gris-clair);
+  padding: 64px 40px;
+}
+
+.titre-section {
+  color: var(--tr-bordeaux);
+  font-size: 34px;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.stat-chiffre {
+  font-size: 30px;
+  color: var(--tr-bordeaux);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55); /* teinte de Noir pour le texte secondaire */
+  margin-top: 4px;
+}
+
+/* Bannière image avec overlay */
+.banniere-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.banniere-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.banniere-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(140, 47, 57, 0.75); /* var(--tr-bordeaux) en transparence */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px;
+  text-align: center;
+}
+
+/* Footer */
+.footer-taverne {
+  background-color: var(--tr-bleu);
+  padding: 36px 40px 28px;
+}
+
+.footer-taverne a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-taverne a:hover {
+  color: #fff;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
