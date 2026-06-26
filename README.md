@@ -322,6 +322,54 @@ git config --global user.name "Ton Prénom Nom"
 git config --global user.email "ton@email.com"
 ```
 
+> **Important :** mets exactement l'email avec lequel tu es inscrit sur GitHub (visible et
+> verifie sur [github.com/settings/emails](https://github.com/settings/emails)). Si tu mets un
+> autre email, GitHub n'arrivera pas a relier tes commits a ton compte, et tu ne pourras pas
+> avoir le badge "Verified" (voir section suivante).
+
+---
+
+### 4. (Optionnel) Verifier tes commits
+
+Par defaut, tes commits affichent juste ton nom en texte (n'importe qui peut taper ce nom dans
+sa config Git, donc ca ne prouve rien). Le badge vert **"Verified"** sur GitHub prouve en plus,
+de facon cryptographique, que c'est bien toi qui as ecrit le commit. Voila comment l'activer.
+
+**1. Verifie que tu as une cle SSH**, ou genere-en une dediee a la signature si tu n'en as pas :
+
+```bash
+ls ~/.ssh/id_ed25519.pub
+```
+
+Si la commande dit que le fichier n'existe pas, genere une nouvelle cle :
+
+```bash
+ssh-keygen -t ed25519 -C "ton@email.com"
+```
+(laisse tout par defaut, appuie sur Entree a chaque question)
+
+**2. Configure Git pour signer tes commits avec cette cle :**
+
+```bash
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+git config --global commit.gpgsign true
+```
+
+**3. Recupere ta cle publique et copie-la :**
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+**4. Ajoute-la sur GitHub :**
+1. Va sur [github.com/settings/keys](https://github.com/settings/keys)
+2. Clique **"New SSH key"**
+3. Choisis bien **Key type : "Signing Key"** (pas "Authentication Key", sinon ca ne marchera pas)
+4. Colle ta cle publique et clique **"Add SSH key"**
+
+A partir de maintenant, tous tes nouveaux commits afficheront le badge **"Verified"** sur GitHub.
+
 ---
 
 ## Récupérer le projet sur ton ordinateur
