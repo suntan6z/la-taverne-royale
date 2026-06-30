@@ -197,6 +197,60 @@ a {
   text-align: center;
 }
 
+/* Carte - onglets du menu */
+.menu-tabs {
+  border: 2px solid var(--tr-bordeaux);
+}
+
+.menu-tab-btn {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 11px 34px;
+  border: none;
+  background: transparent;
+  color: var(--tr-bordeaux);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menu-tab-btn + .menu-tab-btn {
+  border-left: 2px solid var(--tr-bordeaux);
+}
+
+.menu-tab-btn.active {
+  background-color: var(--tr-bordeaux);
+  color: var(--tr-gris-clair);
+}
+
+.menu-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 18px 0;
+}
+
+.menu-item-name {
+  font-size: 20px;
+  color: var(--tr-bordeaux);
+  line-height: 1.2;
+}
+
+.menu-item-price {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--tr-bordeaux);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.menu-item-desc {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 /* Footer */
 .footer-taverne {
   background-color: var(--tr-bleu);

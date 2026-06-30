@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Taverne Royale — À la Carte</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Bandeau décoratif -->
+  <div class="bandeau-deco"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-taverne sticky-top py-0">
+    <div class="container" style="height: 70px;">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+        <img src="assets/logo.svg" alt="La Taverne Royale" width="54" height="54" class="rounded-circle">
+        <span>
+          <span class="d-block font-titre text-white fs-4 lh-1">La Taverne Royale</span>
+          <span class="d-block sous-titre-nav">Cuisine Normande</span>
+        </span>
+      </a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="concept.html">Concept</a></li>
+          <li class="nav-item"><a class="nav-link active" href="carte.html">À la Carte</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn-reserver d-inline-block" href="contact.html">Réserver</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero page -->
+  <div class="hero-page">
+    <img src="images/plat.jpeg" alt="Notre Carte">
+    <div class="hero-overlay">
+      <p class="hero-eyebrow mb-2">La Taverne Royale</p>
+      <h1 class="font-titre text-white" style="font-size: 54px; line-height: 1;">À la Carte</h1>
+      <div style="width: 60px; height: 3px; background: rgba(225,230,225,.7); margin-top: 14px;"></div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="section-claire">
+    <div class="container">
+
+      <p class="text-center mb-5" style="font-size: 13px; color: rgba(0,0,0,.45); letter-spacing: 3px; text-transform: uppercase; font-weight: 500;">Cuisine traditionnelle française · Normande</p>
+
+      <!-- Onglets -->
+      <div class="d-flex justify-content-center mb-5">
+        <div class="menu-tabs d-flex" role="tablist">
+          <button class="menu-tab-btn active" id="tab-entrees" data-bs-toggle="tab" data-bs-target="#menu-entrees" type="button" role="tab" aria-controls="menu-entrees" aria-selected="true">Entrées</button>
+          <button class="menu-tab-btn" id="tab-plats" data-bs-toggle="tab" data-bs-target="#menu-plats" type="button" role="tab" aria-controls="menu-plats" aria-selected="false">Plats</button>
+          <button class="menu-tab-btn" id="tab-desserts" data-bs-toggle="tab" data-bs-target="#menu-desserts" type="button" role="tab" aria-controls="menu-desserts" aria-selected="false">Desserts</button>
+        </div>
+      </div>
+
+      <!-- Contenu des onglets -->
+      <div class="tab-content">
+
+        <!-- Entrées -->
+        <div class="tab-pane fade show active" id="menu-entrees" role="tabpanel" aria-labelledby="tab-entrees">
+          <div class="row row-cols-1 row-cols-md-2 g-0" style="row-gap: 4px; column-gap: 44px;">
+
+            <div class="col menu-item">
+              <div class="d-flex justify-content-between align-items-baseline gap-3 mb-1">
+                <span class="font-titre menu-item-name">Escargots de Bourgogne</span>
+                <span class="menu-item-price">14 €</span>
+              </div>
+              <p class="menu-item-desc mb-0">Beurre persillé maison, pain de campagne grillé</p>
+            </div>
+
+            <div class="col menu-item">
+              <div class="d-flex justify-content-between align-items-baseline gap-3 mb-1">
+                <span class="font-titre menu-item-name">Foie Gras de Canard</span>
+                <span class="menu-item-price">18 €</span>
+              </div>
+              <p class="menu-item-desc mb-0">Chutney de figues, brioche toastée, fleur de sel</p>
+            </div>
+
+            <div class="col menu-item">
+              <div class="d-flex justify-content-between align-items-baseline gap-3 mb-1">
+                <span class="font-titre menu-item-name">Soupe à l'Oignon</span>
+                <span class="menu-item-price">12 €</span>
+              </div>
+              <p class="menu-item-desc mb-0">Gratinée au comté, croûtons au beurre noisette</p>
+            </div>
+
+            <div class="col menu-item">
+              <div class="d-flex justify-content-between align-items-baseline gap-3 mb-1">
+                <span class="font-titre menu-item-name">Terrine de Campagne</span>
+                <span class="menu-item-price">11 €</span>
+              </div>
+              <p class="menu-item-desc mb-0">Cornichons, pickles maison, pain de seigle</p>
+            </div>
+
+            <div class="col menu-item">
+              <div class="d-flex justify-content-between align-items-baseline gap-3 mb-1">
+                <span class="font-titre menu-item-name">Carpaccio de Saint-Jacques</span>
+                <span class="menu-item-price">16 €</span>
+              </div>
+              <p class="menu-item-desc mb-0">Vinaigrette d'agrumes, caviar de truite, herbes</p>
+            </div>
+
+            <div class="col menu-item">
+              <div class="d-flex justify-content-between align-items-baseline gap-3 mb-1">
+                <span class="font-titre menu-item-name">Salade Royale</span>
+                <span class="menu-item-price">13 €</span>
+              </div>
+              <p class="menu-item-desc mb-0">Mesclun, noix de Périgord, roquefort, cidre normand</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Plats : à compléter par Raphaël -->
+        <div class="tab-pane fade" id="menu-plats" role="tabpanel" aria-labelledby="tab-plats">
+          <div class="row row-cols-1 row-cols-md-2 g-0" style="row-gap: 4px; column-gap: 44px;">
+            <!-- TODO (Raphaël) : ajouter les plats ici -->
+          </div>
+        </div>
+
+        <!-- Desserts : à compléter par Moussa -->
+        <div class="tab-pane fade" id="menu-desserts" role="tabpanel" aria-labelledby="tab-desserts">
+          <div class="row row-cols-1 row-cols-md-2 g-0" style="row-gap: 4px; column-gap: 44px;">
+            <!-- TODO (Moussa) : ajouter les desserts ici -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Note de bas de carte -->
+  <div class="py-4 px-4" style="background-color: rgba(0,0,0,.04);">
+    <div class="container text-center">
+      <p class="mb-1" style="font-size: 14px; color: rgba(0,0,0,.6); font-style: italic;">Notre carte évolue selon les saisons et l'arrivage de nos producteurs locaux. Carte des vins disponible sur demande.</p>
+      <p class="mb-0" style="font-size: 13px; color: rgba(0,0,0,.45);">Pour toute allergie ou régime alimentaire particulier, merci d'en informer votre serveur.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-taverne">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3 pb-3 border-bottom" style="border-color: rgba(255,255,255,.2) !important;">
+      <div class="d-flex align-items-center gap-3">
+        <img src="assets/logo.svg" alt="La Taverne Royale" width="44" height="44" class="rounded-circle" style="opacity: .9;">
+        <div>
+          <div class="font-titre text-white fs-5 lh-1">La Taverne Royale</div>
+          <div class="sous-titre-nav">Cuisine Normande</div>
+        </div>
+      </div>
+      <div class="d-flex gap-4">
+        <a href="index.html">Accueil</a>
+        <a href="concept.html">Concept</a>
+        <a href="carte.html">À la Carte</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" title="Facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="#" title="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"></line></svg>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <p class="footer-copyright mb-0">© 2026 La Taverne Royale — Tous droits réservés · 14 rue de la Bretagne, 76600 Le Havre</p>
+    </div>
+  </footer>
+
+  <!-- Bouton flottant -->
+  <div style="position: fixed; bottom: 28px; right: 28px; z-index: 999; box-shadow: 0 4px 20px rgba(140,47,57,.45);">
+    <a href="contact.html" class="d-block btn-reserver">Réserver une table</a>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
