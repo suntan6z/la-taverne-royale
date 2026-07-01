@@ -155,7 +155,7 @@ et change juste la classe `active` sur le lien de **ta** page :
 <nav class="navbar navbar-expand-lg navbar-taverne sticky-top py-0">
   <div class="container" style="height: 70px;">
     <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-      <img src="assets/logo.svg" alt="La Taverne Royale" width="54" height="54" class="rounded-circle">
+      <img src="assets/logo-couronne.svg" alt="La Taverne Royale" width="54" height="54" class="rounded-circle">
       <span>
         <span class="d-block font-titre text-white fs-4 lh-1">La Taverne Royale</span>
         <span class="d-block sous-titre-nav">Cuisine Normande</span>
