@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Taverne Royale — Notre Concept</title>
+  <title>La Taverne Royale — Contact &amp; Réservation</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -18,7 +18,7 @@
           <img src="assets/logo-couronne.svg" alt="La Taverne Royale" width="54" height="54" class="rounded-circle">
           <span>
             <span class="d-block font-titre fs-4 lh-1">La Taverne Royale</span>
-            <span class="d-block sous-titre-nav">Cuisine Française</span>
+            <span class="d-block sous-titre-nav">Ici, chaque convive est roi</span>
           </span>
         </a>
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -42,88 +42,146 @@
     <div class="bandeau-deco"></div>
   </header>
 
-
-</div>
-</body>
-<html>
-  
-</html>
-
-
-<div class="row">
-  <div class="col">
-    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-  </div>
-  <div class="col">
-    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-  </div>
-</div>
-
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
+  <!-- Hero page -->
+  <!-- TODO (Moussa) : remplacer images/reserved.jpg par une photo dediee si besoin -->
+  <div class="hero-page">
+    <img src="images/reserved.jpg" alt="Contact et réservation">
+    <div class="hero-overlay">
+      <div class="container">
+        <p class="hero-eyebrow mb-2">La Taverne Royale</p>
+        <h1 class="font-titre text-white hero-title">Contact &amp; Réservation</h1>
+        <div class="hero-deco-line"></div>
+      </div>
     </div>
   </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+
+  <!-- Coordonnées + Réservation -->
+  <div class="section-claire">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Colonne infos -->
+        <div class="col-lg-5">
+          <h2 class="font-titre titre-section">Nous Trouver</h2>
+
+          <!-- TODO (Moussa) : remplacer les informations ci-dessous par les vraies coordonnées du restaurant -->
+          <div class="contact-info mb-5">
+            <div class="contact-info-row">
+              <span class="stat-label">Adresse</span>
+              <span class="contact-info-value">À compléter</span>
+            </div>
+            <div class="contact-info-row">
+              <span class="stat-label">Téléphone</span>
+              <span class="contact-info-value">À compléter</span>
+            </div>
+            <div class="contact-info-row">
+              <span class="stat-label">Email</span>
+              <span class="contact-info-value">À compléter</span>
+            </div>
+          </div>
+
+          <h2 class="font-titre titre-section">Horaires</h2>
+
+          <!-- TODO (Moussa) : remplacer les horaires ci-dessous par les vrais horaires -->
+          <table class="horaires-table w-100">
+            <tbody>
+              <tr>
+                <td>Lundi</td>
+                <td class="text-end">À compléter</td>
+              </tr>
+              <tr>
+                <td>Mar — Ven</td>
+                <td class="text-end">À compléter</td>
+              </tr>
+              <tr>
+                <td>Samedi</td>
+                <td class="text-end">À compléter</td>
+              </tr>
+              <tr>
+                <td>Dimanche</td>
+                <td class="text-end">À compléter</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <iframe
+            class="map-embed mt-4"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.7543991669468!2d0.10912041146204665!3d49.4891461559936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02f1fb20745d3%3A0xf7ae308bfdd5cb9f!2s14%20Rue%20de%20Bretagne%2C%2076600%20Le%20Havre!5e0!3m2!1sfr!2sfr!4v1782901321850!5m2!1sfr!2sfr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+
+        <!-- Colonne réservation -->
+        <div class="col-lg-7">
+          <h2 class="font-titre titre-section">Réserver une Table</h2>
+          <p class="menu-eyebrow mb-4">Mardi au samedi · Déjeuner &amp; dîner</p>
+
+          <form class="reservation-form p-4 p-md-5 bg-white shadow-lg">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-prenom">Prénom</label>
+                <input type="text" class="form-control" id="resa-prenom" placeholder="Votre prénom">
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-nom">Nom</label>
+                <input type="text" class="form-control" id="resa-nom" placeholder="Votre nom">
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-date">Date</label>
+                <input type="date" class="form-control" id="resa-date">
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-heure">Heure</label>
+                <input type="time" class="form-control" id="resa-heure">
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-personnes">Personnes</label>
+                <select class="form-select" id="resa-personnes">
+                  <option>1 personne</option>
+                  <option>2 personnes</option>
+                  <option>3 personnes</option>
+                  <option>4 personnes</option>
+                  <option>5 personnes et +</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-telephone">Téléphone</label>
+                <input type="tel" class="form-control" id="resa-telephone" placeholder="+33 6 XX XX XX XX">
+              </div>
+              <div class="col-12">
+                <label class="stat-label d-block mb-2" for="resa-message">Message / Allergies</label>
+                <textarea class="form-control" id="resa-message" rows="3" placeholder="Occasion spéciale, allergies, demandes particulières..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-reserver">Confirmer la réservation</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
   </div>
-</form>
-<section class="hero-contact d-flex align-items-end">
-  <div class="container pb-5">
-    <p class="text-uppercase text-white small mb-1">La Taverne Royale</p>
-    <h1 class="text-white display-4">Contact & Réservation</h1>
-    <hr class="hero-underline">
-  </div>
-</section>
 
+  <!-- Footer -->
+  <footer class="footer-taverne">
+    <div class="container d-flex justify-content-center gap-3 pb-2 border-bottom">
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" title="Facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="#" title="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"></line></svg>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-2">
+      <p class="footer-copyright mb-0">© 2026 La Taverne Royale — Tous droits réservés · 14 rue de la Bretagne, 76600 Le Havre</p>
+    </div>
+  </footer>
 
-
-<h1>horaires</h1>
-<h2>lundi fermé</h2>
-<h3>mar-ven   12h-14h-19h-22h</h3>
-<h4>samedi    12h-14h30-19h-22h30</h4>
-<h5>dimanche  12h-15h</h5>
-
-
-
-
-
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.7543991669468!2d0.10912041146204665!3d49.4891461559936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02f1fb20745d3%3A0xf7ae308bfdd5cb9f!2s14%20Rue%20de%20Bretagne%2C%2076600%20Le%20Havre!5e0!3m2!1sfr!2sfr!4v1782901321850!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>                                                                                                                                                                                                                                                                                        
-
-<footer></footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
