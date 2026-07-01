@@ -1,190 +1,334 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+        <title>Restaurant</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto+Condensed:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-    <title>Restaurant</title>
+    <body class="d-flex flex-column min-vh-100">
+        <!-- Bandeau décoratif -->
+        <div class="bandeau-deco"></div>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body class="d-flex flex-column min-vh-100">
-      <!-- Bandeau décoratif -->
-      <div class="bandeau-deco"></div>
-
-      <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-taverne sticky-top py-0">
-    <div class="container" style="height: 70px;">
-      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-        <img src="assets/logo-couronne.svg" alt="La Taverne Royale" width="54" height="54" class="rounded-circle">
-        <span>
-          <span class="d-block font-titre text-white fs-4 lh-1">La Taverne Royale</span>
-          <span class="d-block sous-titre-nav">Cuisine Française</span>
-        </span>
-      </a>
-      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="concept.html">Concept</a></li>
-          <li class="nav-item"><a class="nav-link" href="carte.html">À la Carte</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn-reserver d-inline-block" href="contact.html">Réserver</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-<div id="slider">
-
-    <!-- Points -->
-    <div class="dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-
-    <!-- Images -->
-    <div class="slides">
-
-        <div class="slide">
-            <img src="images/hero-concept.jpg" alt="">
-            <div class="caption">
-                Venez partager un moment d'exception au cœur de la Normandie.
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-taverne sticky-top py-0">
+            <div class="container" style="height: 70px">
+                <a
+                    class="navbar-brand d-flex align-items-center gap-3"
+                    href="index.html"
+                >
+                    <img
+                        src="assets/logo-couronne.svg"
+                        alt="La Taverne Royale"
+                        width="54"
+                        height="54"
+                        class="rounded-circle"
+                    />
+                    <span>
+                        <span class="d-block font-titre text-white fs-4 lh-1"
+                            >La Taverne Royale</span
+                        >
+                        <span class="d-block sous-titre-nav"
+                            >Cuisine Française</span
+                        >
+                    </span>
+                </a>
+                <button
+                    class="navbar-toggler bg-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html"
+                                >Accueil</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="concept.html">Concept</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carte.html">À la Carte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a
+                                class="btn-reserver d-inline-block"
+                                href="contact.html"
+                                >Réserver</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+
+        <div id="slider">
+            <!-- Points -->
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <!-- Images -->
+            <div class="slides">
+                <div class="slide">
+                    <img src="images/hero-concept.jpg" alt="" />
+                    <div class="caption">
+                        Venez partager un moment d'exception au cœur de la
+                        Normandie.
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/biere.jpg" alt="" />
+                    <div class="caption">
+                        Découvrez notre cuisine traditionnelle.
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/banniere-normandie.jpg" alt="" />
+                    <div class="caption">Des desserts faits maison.</div>
+                </div>
+            </div>
+
+            <!-- Flèches -->
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
         </div>
 
-        <div class="slide">
-            <img src="images/salle-restaurant.jpg" alt="">
-            <div class="caption">
-                Découvrez notre cuisine traditionnelle.
-            </div>
-        </div>
+        <div class="container py-5">
+            <div class="row g-4">
+                <!-- Carte 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img
+                            src="images/salle-restaurant.jpg"
+                            class="card-img-top"
+                            alt="Concept"
+                        />
 
-        <div class="slide">
-            <img src="images/banniere-normandie.jpg" alt="">
-            <div class="caption">
-                Des desserts faits maison.
-            </div>
-        </div>
+                        <div class="card-body">
+                            <h2
+                                class="card-title text-danger mb-4"
+                                style="
+                                    font-family:
+                                        &quot;Pirata One&quot;, cursive;
+                                    font-size: 2rem;
+                                "
+                            >
+                                Notre Concept
+                            </h2>
 
-    </div>
+                            <p
+                                class="card-text text-muted mb-4"
+                                style="
+                                    font-family:
+                                        &quot;Roboto Condensed&quot;, sans-serif;
+                                "
+                            >
+                                Découvrez l'histoire, les valeurs et l'âme de La
+                                Taverne Royale au cœur de la Normandie.
+                            </p>
 
-    <!-- Flèches -->
-    <button id="prev">&#10094;</button>
-    <button id="next">&#10095;</button>
+                            <a
+                                href="concept.html"
+                                class="text-primary fw-bold text-decoration-none"
+                            >
+                                En savoir plus →
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-</div>
+                <!-- Carte 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img
+                            src="images/salle-restaurant.jpg"
+                            class="card-img-top"
+                            alt="Carte"
+                        />
 
-<div class="container py-5">
-    <div class="row g-4">
+                        <div class="card-body">
+                            <h2
+                                class="card-title text-danger mb-4"
+                                style="
+                                    font-family:
+                                        &quot;Pirata One&quot;, cursive;
+                                    font-size: 2rem;
+                                "
+                            >
+                                Notre Carte
+                            </h2>
 
-        <!-- Carte 1 -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="images/salle-restaurant.jpg" class="card-img-top" alt="Concept">
+                            <p
+                                class="card-text text-muted mb-4"
+                                style="
+                                    font-family:
+                                        &quot;Roboto Condensed&quot;, sans-serif;
+                                "
+                            >
+                                Entrées, plats et desserts de la cuisine
+                                normande. Produits locaux et recettes
+                                traditionnelles.
+                            </p>
 
-                <div class="card-body">
-                    <h2 class="card-title text-danger mb-4" style="font-family: 'Pirata One', cursive; font-size: 2rem;">Notre Concept</h2>
+                            <a
+                                href="carte.html"
+                                class="text-primary fw-bold text-decoration-none"
+                            >
+                                Voir la carte →
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                    <p class="card-text text-muted mb-4" style="font-family: 'Roboto Condensed', sans-serif;">
-                        Découvrez l'histoire, les valeurs et l'âme de La Taverne Royale
-                        au cœur de la Normandie.
-                    </p>
+                <!-- Carte 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img
+                            src="images/salle-reservation.png"
+                            class="card-img-top"
+                            alt="Réservation"
+                        />
 
-                    <a href="concept.html" class="text-primary fw-bold text-decoration-none">
-                        En savoir plus →
-                    </a>
+                        <div class="card-body">
+                            <h2
+                                class="card-title text-danger mb-4"
+                                style="
+                                    font-family:
+                                        &quot;Pirata One&quot;, cursive;
+                                    font-size: 2rem;
+                                "
+                            >
+                                Réservation
+                            </h2>
+
+                            <p
+                                class="card-text text-muted mb-4"
+                                style="
+                                    font-family:
+                                        &quot;Roboto Condensed&quot;, sans-serif;
+                                "
+                            >
+                                Mardi au samedi, midi et soir. Réservez votre
+                                table et profitez d'un moment royal.
+                            </p>
+
+                            <a
+                                href="contact.html"
+                                class="text-primary fw-bold text-decoration-none"
+                            >
+                                Réserver →
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Carte 2 -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="images/salle-restaurant.jpg" class="card-img-top" alt="Carte">
-
-                <div class="card-body">
-                    <h2 class="card-title text-danger mb-4" style="font-family: 'Pirata One', cursive; font-size: 2rem;">Notre Carte</h2>
-
-                    <p class="card-text text-muted mb-4" style="font-family: 'Roboto Condensed', sans-serif;">
-                        Entrées, plats et desserts de la cuisine normande.
-                        Produits locaux et recettes traditionnelles.
-                    </p>
-
-                    <a href="carte.html" class="text-primary fw-bold text-decoration-none">
-                        Voir la carte →
+        <!-- Footer -->
+        <footer class="footer-taverne mt-auto">
+            <div
+                class="container d-flex flex-wrap align-items-center justify-content-between gap-3 pb-3 border-bottom"
+                style="border-color: rgba(255, 255, 255, 0.2) !important"
+            >
+                <div class="d-flex align-items-center gap-3">
+                    <img
+                        src="assets/logo-couronne.svg"
+                        alt="La Taverne Royale"
+                        width="44"
+                        height="44"
+                        class="rounded-circle"
+                        style="opacity: 0.9"
+                    />
+                    <div>
+                        <div class="font-titre text-white fs-5 lh-1">
+                            La Taverne Royale
+                        </div>
+                        <div class="sous-titre-nav">Cuisine Normande</div>
+                    </div>
+                </div>
+                <div class="d-flex gap-4">
+                    <a href="index.html">Accueil</a>
+                    <a href="concept.html">Concept</a>
+                    <a href="carte.html">À la Carte</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                    <a href="#" title="Facebook">
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                            ></path>
+                        </svg>
+                    </a>
+                    <a href="#" title="Instagram">
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect
+                                x="2"
+                                y="2"
+                                width="20"
+                                height="20"
+                                rx="5"
+                                ry="5"
+                            ></rect>
+                            <path
+                                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                            ></path>
+                            <line
+                                x1="17.5"
+                                y1="6.5"
+                                x2="17.51"
+                                y2="6.5"
+                                stroke-width="3"
+                            ></line>
+                        </svg>
                     </a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte 3 -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="images/salle-reservation.png" class="card-img-top" alt="Réservation">
-
-                <div class="card-body">
-                    <h2 class="card-title text-danger mb-4" style="font-family: 'Pirata One', cursive; font-size: 2rem;">Réservation</h2>
-
-                    <p class="card-text text-muted mb-4" style="font-family: 'Roboto Condensed', sans-serif;">
-                        Mardi au samedi, midi et soir. Réservez votre table
-                        et profitez d'un moment royal.
-                    </p>
-
-                    <a href="contact.html" class="text-primary fw-bold text-decoration-none">
-                        Réserver →
-                    </a>
-                </div>
+            <div class="text-center mt-3">
+                <p class="footer-copyright mb-0">
+                    © 2026 La Taverne Royale — Tous droits réservés · 14 rue de
+                    la Bretagne, 76600 Le Havre
+                </p>
             </div>
-        </div>
+        </footer>
 
-    </div>
-</div>
-
-<!-- Footer -->
-  <footer class="footer-taverne mt-auto">
-    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3 pb-3 border-bottom" style="border-color: rgba(255,255,255,.2) !important;">
-      <div class="d-flex align-items-center gap-3">
-        <img src="assets/logo-couronne.svg" alt="La Taverne Royale" width="44" height="44" class="rounded-circle" style="opacity: .9;">
-        <div>
-          <div class="font-titre text-white fs-5 lh-1">La Taverne Royale</div>
-          <div class="sous-titre-nav">Cuisine Normande</div>
-        </div>
-      </div>
-      <div class="d-flex gap-4">
-        <a href="index.html">Accueil</a>
-        <a href="concept.html">Concept</a>
-        <a href="carte.html">À la Carte</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="d-flex gap-3 align-items-center">
-        <a href="#" title="Facebook">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-        </a>
-        <a href="#" title="Instagram">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"></line></svg>
-        </a>
-      </div>
-    </div>
-    <div class="text-center mt-3">
-      <p class="footer-copyright mb-0">© 2026 La Taverne Royale — Tous droits réservés · 14 rue de la Bretagne, 76600 Le Havre</p>
-    </div>
-  </footer>
-
-<script src="js/index.js"></script>
-
-</body>
-
+        <script src="js/index.js"></script>
+    </body>
 </html>
