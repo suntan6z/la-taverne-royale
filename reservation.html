@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Taverne Royale — Réserver une Table</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- En-tête : navbar + bandeau décoratif, fixes ensemble au scroll -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-taverne py-0">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+          <img src="assets/logo-couronne.svg" alt="La Taverne Royale" width="54" height="54" class="rounded-circle">
+          <span>
+            <span class="d-block font-titre fs-4 lh-1">La Taverne Royale</span>
+            <span class="d-block sous-titre-nav">Ici, chaque convive est roi</span>
+          </span>
+        </a>
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="concept.html">Concept</a></li>
+            <li class="nav-item"><a class="nav-link" href="carte.html">À la Carte</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn-reserver d-inline-block active" href="reservation.html">Réserver</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bandeau décoratif -->
+    <div class="bandeau-deco"></div>
+  </header>
+
+  <!-- Hero page -->
+  <div class="hero-page">
+    <img src="images/reserved.jpg" alt="Réserver une table">
+    <div class="hero-overlay">
+      <div class="container">
+        <p class="hero-eyebrow mb-2">La Taverne Royale</p>
+        <h1 class="font-titre text-white hero-title">Réserver une Table</h1>
+        <div class="hero-deco-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendrier + Réservation -->
+  <div class="section-claire">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Colonne calendrier de disponibilités -->
+        <div class="col-lg-5">
+          <h2 class="font-titre titre-section">Choisir une Date</h2>
+          <p class="menu-eyebrow mb-4">Sélectionnez un jour ouvré puis un créneau</p>
+
+          <!-- Calendrier mensuel (rendu par js/reservation.js) -->
+          <div class="calendrier" id="calendrier">
+            <div class="cal-header">
+              <button type="button" class="cal-nav" id="cal-prev" aria-label="Mois précédent">‹</button>
+              <span class="cal-titre font-titre" id="cal-titre"></span>
+              <button type="button" class="cal-nav" id="cal-next" aria-label="Mois suivant">›</button>
+            </div>
+            <div class="cal-grille" id="cal-grille"><!-- jours injectés en JS --></div>
+          </div>
+
+          <!-- Créneaux horaires (affichés après sélection d'un jour) -->
+          <div class="creneaux-zone mt-4" id="creneaux-zone">
+            <p class="stat-label mb-2">Créneaux disponibles</p>
+            <p class="creneaux-invite" id="creneaux-invite">Choisissez d'abord une date dans le calendrier.</p>
+            <div id="creneaux"><!-- boutons créneaux injectés en JS --></div>
+          </div>
+
+          <!-- Rappel des horaires -->
+          <table class="horaires-table w-100 mt-4">
+            <tbody>
+              <tr><td>Lundi</td><td class="text-end">fermé</td></tr>
+              <tr><td>Mar — Ven</td><td class="text-end">12h-14h30 et 19h00-22h30</td></tr>
+              <tr><td>Samedi</td><td class="text-end">12h-15h et 19h00-23h00</td></tr>
+              <tr><td>Dimanche</td><td class="text-end">12h-15h</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Colonne réservation -->
+        <div class="col-lg-7">
+          <h2 class="font-titre titre-section">Vos Informations</h2>
+          <p class="menu-eyebrow mb-4">Mardi au samedi · Déjeuner &amp; dîner</p>
+
+          <form class="reservation-form p-4 p-md-5 bg-white shadow-lg" id="form-reservation" action="reservation-confirme.html" method="get">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-prenom">Prénom</label>
+                <input type="text" class="form-control" id="resa-prenom" name="prenom" placeholder="Votre prénom" required>
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-nom">Nom</label>
+                <input type="text" class="form-control" id="resa-nom" name="nom" placeholder="Votre nom" required>
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-date">Date</label>
+                <input type="text" class="form-control" id="resa-date" name="date" placeholder="À choisir dans le calendrier" readonly>
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-heure">Heure</label>
+                <input type="text" class="form-control" id="resa-heure" name="heure" placeholder="À choisir dans les créneaux" readonly>
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-personnes">Personnes</label>
+                <select class="form-select" id="resa-personnes" name="personnes" required>
+                  <option value="" disabled selected>Choisissez…</option>
+                  <option>1 personne</option>
+                  <option>2 personnes</option>
+                  <option>3 personnes</option>
+                  <option>4 personnes</option>
+                  <option>5 personnes et +</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="stat-label d-block mb-2" for="resa-telephone">Téléphone</label>
+                <input type="tel" class="form-control" id="resa-telephone" name="telephone" placeholder="+33 6 XX XX XX XX" required>
+              </div>
+              <div class="col-12">
+                <label class="stat-label d-block mb-2" for="resa-message">Message / Allergies <span class="label-optionnel">(facultatif)</span></label>
+                <textarea class="form-control" id="resa-message" name="message" rows="3" placeholder="Occasion spéciale, allergies, demandes particulières..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-reserver">Confirmer la réservation</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-taverne">
+    <div class="container d-flex justify-content-center gap-3 pb-2 border-bottom">
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" title="Facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="#" title="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"></line></svg>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-2">
+      <p class="footer-copyright mb-0">© 2026 La Taverne Royale — Tous droits réservés · 14 rue de la Bretagne, 76600 Le Havre</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/reservation.js"></script>
+</body>
+</html>

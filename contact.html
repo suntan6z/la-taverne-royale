@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Taverne Royale — Contact &amp; Réservation</title>
+  <title>La Taverne Royale — Contact</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -31,7 +31,7 @@
             <li class="nav-item"><a class="nav-link" href="carte.html">À la Carte</a></li>
             <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
             <li class="nav-item ms-lg-3">
-              <a class="btn-reserver d-inline-block" href="contact.html">Réserver</a>
+              <a class="btn-reserver d-inline-block" href="reservation.html">Réserver</a>
             </li>
           </ul>
         </div>
@@ -43,29 +43,39 @@
   </header>
 
   <!-- Hero page -->
-  <!-- TODO (Moussa) : remplacer images/reserved.jpg par une photo dediee si besoin -->
   <div class="hero-page">
-    <img src="images/reserved.jpg" alt="Contact et réservation">
+    <img src="images/ext1.jpg" alt="La Taverne Royale — devanture">
     <div class="hero-overlay">
       <div class="container">
         <p class="hero-eyebrow mb-2">La Taverne Royale</p>
-        <h1 class="font-titre text-white hero-title">Contact &amp; Réservation</h1>
+        <h1 class="font-titre text-white hero-title">Contact</h1>
         <div class="hero-deco-line"></div>
       </div>
     </div>
   </div>
 
-  <!-- Coordonnées + Réservation -->
+  <!-- Accueil + Coordonnées -->
   <div class="section-claire">
     <div class="container">
       <div class="row g-5">
 
-        <!-- Colonne infos -->
-        <div class="col-lg-5">
-          <h2 class="font-titre titre-section">Nous Trouver</h2>
+        <!-- Colonne accueil + coordonnées -->
+        <div class="col-lg-6">
+          <h2 class="font-titre titre-section">Envie de nous rendre visite ?</h2>
+          <p class="concept-text">
+            Que ce soit pour un déjeuner entre collègues, un dîner en amoureux ou
+            une grande tablée en famille, notre équipe vous accueille dans une
+            ambiance chaleureuse au cœur du Havre. Une question sur nos plats, nos
+            allergènes ou une demande particulière ? Écrivez-nous ou appelez-nous,
+            nous vous répondrons avec plaisir.
+          </p>
+          <p class="concept-text">
+            Pour garantir votre table, la réservation est vivement conseillée,
+            surtout le week-end.
+          </p>
 
           <!-- TODO (Moussa) : remplacer les informations ci-dessous par les vraies coordonnées du restaurant -->
-          <div class="contact-info mb-5">
+          <div class="contact-info my-4">
             <div class="contact-info-row">
               <span class="stat-label">Adresse</span>
               <span class="contact-info-value">14 rue de la Bretagne</span>
@@ -80,6 +90,11 @@
             </div>
           </div>
 
+          <a href="reservation.html" class="btn-reserver d-inline-block mt-2">Réserver une table</a>
+        </div>
+
+        <!-- Colonne horaires + carte -->
+        <div class="col-lg-6">
           <h2 class="font-titre titre-section">Horaires</h2>
 
           <!-- TODO (Moussa) : remplacer les horaires ci-dessous par les vrais horaires -->
@@ -111,54 +126,6 @@
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
           ></iframe>
-        </div>
-
-        <!-- Colonne réservation -->
-        <div class="col-lg-7">
-          <h2 class="font-titre titre-section">Réserver une Table</h2>
-          <p class="menu-eyebrow mb-4">Mardi au samedi · Déjeuner &amp; dîner</p>
-
-          <form class="reservation-form p-4 p-md-5 bg-white shadow-lg">
-            <div class="row g-4">
-              <div class="col-md-6">
-                <label class="stat-label d-block mb-2" for="resa-prenom">Prénom</label>
-                <input type="text" class="form-control" id="resa-prenom" placeholder="Votre prénom">
-              </div>
-              <div class="col-md-6">
-                <label class="stat-label d-block mb-2" for="resa-nom">Nom</label>
-                <input type="text" class="form-control" id="resa-nom" placeholder="Votre nom">
-              </div>
-              <div class="col-md-6">
-                <label class="stat-label d-block mb-2" for="resa-date">Date</label>
-                <input type="date" class="form-control" id="resa-date">
-              </div>
-              <div class="col-md-6">
-                <label class="stat-label d-block mb-2" for="resa-heure">Heure</label>
-                <input type="time" class="form-control" id="resa-heure">
-              </div>
-              <div class="col-md-6">
-                <label class="stat-label d-block mb-2" for="resa-personnes">Personnes</label>
-                <select class="form-select" id="resa-personnes">
-                  <option>1 personne</option>
-                  <option>2 personnes</option>
-                  <option>3 personnes</option>
-                  <option>4 personnes</option>
-                  <option>5 personnes et +</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label class="stat-label d-block mb-2" for="resa-telephone">Téléphone</label>
-                <input type="tel" class="form-control" id="resa-telephone" placeholder="+33 6 XX XX XX XX">
-              </div>
-              <div class="col-12">
-                <label class="stat-label d-block mb-2" for="resa-message">Message / Allergies</label>
-                <textarea class="form-control" id="resa-message" rows="3" placeholder="Occasion spéciale, allergies, demandes particulières..."></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn-reserver">Confirmer la réservation</button>
-              </div>
-            </div>
-          </form>
         </div>
 
       </div>

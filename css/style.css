@@ -487,3 +487,180 @@ a {
   width: 100%;
   height: 220px;
 }
+
+.label-optionnel {
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+/* ===== Page Réservation — calendrier de disponibilités ===== */
+.calendrier {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  background-color: #fff;
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.cal-titre {
+  font-size: 24px;
+  color: var(--tr-bordeaux);
+}
+
+.cal-nav {
+  border: none;
+  background: transparent;
+  color: var(--tr-bordeaux);
+  font-size: 26px;
+  line-height: 1;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.cal-nav:hover {
+  color: var(--tr-bordeaux-hover);
+}
+
+.cal-nav.disabled {
+  color: rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+.cal-grille {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.cal-jour-nom {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.45);
+  padding-bottom: 6px;
+}
+
+.cal-jour {
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  color: var(--tr-noir);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.cal-jour:hover:not(.disabled):not(.vide) {
+  background: var(--tr-beige);
+  border-color: var(--tr-bordeaux);
+}
+
+.cal-jour.vide {
+  border: none;
+  background: transparent;
+  cursor: default;
+}
+
+.cal-jour.disabled {
+  color: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.03);
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.cal-jour.selected {
+  background: var(--tr-bordeaux);
+  border-color: var(--tr-bordeaux);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Créneaux horaires */
+.creneaux-invite {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.55);
+  font-style: italic;
+}
+
+.creneaux-erreur {
+  color: var(--tr-bordeaux);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.creneau-groupe + .creneau-groupe {
+  margin-top: 14px;
+}
+
+.creneau-service {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--tr-bordeaux);
+  margin-bottom: 8px;
+}
+
+.creneau-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.creneau-btn {
+  border: 1px solid var(--tr-bordeaux);
+  background: #fff;
+  color: var(--tr-bordeaux);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.creneau-btn:hover {
+  background: var(--tr-beige);
+}
+
+.creneau-btn.selected {
+  background: var(--tr-bordeaux);
+  color: #fff;
+}
+
+/* ===== Page de confirmation — récapitulatif ===== */
+.recap-resa {
+  max-width: 520px;
+  margin: 0 auto;
+  border-top: 4px solid var(--tr-bordeaux);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 28px 32px;
+}
+
+.recap-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.recap-row:last-child {
+  border-bottom: none;
+}
+
+.recap-value {
+  color: var(--tr-bordeaux);
+  font-weight: 700;
+}

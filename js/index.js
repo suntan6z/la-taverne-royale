@@ -7,9 +7,6 @@ const slides = document.querySelector(".slides");
 // Toutes les diapositives
 const slide = document.querySelectorAll(".slide");
 
-// Tous les points
-const dots = document.querySelectorAll(".dot");
-
 // Nombre d'images
 const total = slide.length;
 
@@ -17,14 +14,6 @@ const total = slide.length;
 function afficherSlide(){
 
     slides.style.transform = `translateX(-${numero*100}%)`;
-
-    // On enlève le point actif
-    dots.forEach(function(dot){
-        dot.classList.remove("active");
-    });
-
-    // On active le bon point
-    dots[numero].classList.add("active");
 
 }
 
@@ -55,18 +44,5 @@ document.getElementById("prev").addEventListener("click",function(){
     }
 
     afficherSlide();
-
-});
-
-// Clic sur les points
-dots.forEach(function(dot,index){
-
-    dot.addEventListener("click",function(){
-
-        numero=index;
-
-        afficherSlide();
-
-    });
 
 });

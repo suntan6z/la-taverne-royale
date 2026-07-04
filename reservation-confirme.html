@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Taverne Royale — Notre Concept</title>
+  <title>La Taverne Royale — Réservation confirmée</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -27,11 +27,11 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
             <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link active" href="concept.html">Concept</a></li>
+            <li class="nav-item"><a class="nav-link" href="concept.html">Concept</a></li>
             <li class="nav-item"><a class="nav-link" href="carte.html">À la Carte</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             <li class="nav-item ms-lg-3">
-              <a class="btn-reserver d-inline-block" href="contact.html">Réserver</a>
+              <a class="btn-reserver d-inline-block" href="reservation.html">Réserver</a>
             </li>
           </ul>
         </div>
@@ -42,8 +42,70 @@
     <div class="bandeau-deco"></div>
   </header>
 
-  <h1 class="text-center mt-5">Votre réservation a été confirmée !</h1>
-  <p class="text-center mt-3">Merci d'avoir réservé à La Taverne Royale. Nous avons bien reçu votre demande et nous vous attendons avec impatience.</p>
+  <div class="section-claire">
+    <div class="container text-center">
+      <p class="hero-eyebrow mb-2" style="color: rgba(0,0,0,0.45);">La Taverne Royale</p>
+      <h1 class="font-titre titre-section d-inline-block">Votre réservation a été confirmée !</h1>
+      <p class="concept-text mx-auto mb-5" style="max-width: 620px;" id="confirm-message">
+        Merci d'avoir réservé à La Taverne Royale. Nous avons bien reçu votre demande et nous vous attendons avec impatience.
+      </p>
+
+      <!-- Récapitulatif rempli en JS à partir des paramètres de l'URL -->
+      <div class="recap-resa text-start" id="recap-resa" hidden>
+        <h2 class="font-titre titre-section text-center" style="font-size: 28px;">Récapitulatif</h2>
+        <div class="recap-row">
+          <span class="stat-label">Au nom de</span>
+          <span class="recap-value" id="recap-nom"></span>
+        </div>
+        <div class="recap-row">
+          <span class="stat-label">Date</span>
+          <span class="recap-value" id="recap-date"></span>
+        </div>
+        <div class="recap-row">
+          <span class="stat-label">Heure</span>
+          <span class="recap-value" id="recap-heure"></span>
+        </div>
+        <div class="recap-row">
+          <span class="stat-label">Nombre de convives</span>
+          <span class="recap-value" id="recap-personnes"></span>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <a class="btn-reserver d-inline-block" href="index.html">Retour à l'accueil</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Récupère les détails de la réservation transmis via l'URL (site fictif,
+    // aucune base de données) et remplit le récapitulatif.
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const prenom = params.get("prenom");
+      const nom = params.get("nom");
+      const date = params.get("date");
+      const heure = params.get("heure");
+      const personnes = params.get("personnes");
+
+      if (prenom || date || heure || personnes) {
+        const recap = document.getElementById("recap-resa");
+        recap.hidden = false;
+
+        const nomComplet = [prenom, nom].filter(Boolean).join(" ");
+        document.getElementById("recap-nom").textContent = nomComplet || "—";
+        document.getElementById("recap-date").textContent = date || "—";
+        document.getElementById("recap-heure").textContent = heure || "—";
+        document.getElementById("recap-personnes").textContent = personnes || "—";
+
+        if (prenom) {
+          document.getElementById("confirm-message").textContent =
+            "Merci " + prenom + " ! Nous avons bien reçu votre demande de " +
+            "réservation et nous vous attendons avec impatience.";
+        }
+      }
+    })();
+  </script>
 
 
           <!-- Footer -->
