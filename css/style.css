@@ -426,6 +426,17 @@ a {
   font-size: 12px;
 }
 
+.footer-disclaimer a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-disclaimer a:hover {
+  color: #fff;
+}
+
 /* Cartes de la page d'accueil */
 .card .card-img-top {
   height: 220px;
@@ -663,4 +674,40 @@ a {
 .recap-value {
   color: var(--tr-bordeaux);
   font-weight: 700;
+}
+
+/* ===== Page Disclaimer ===== */
+.disclaimer-page {
+  max-width: 820px;
+}
+
+.disclaimer-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(140, 47, 57, 0.06);
+  border: 1px solid var(--tr-bordeaux);
+  border-left: 6px solid var(--tr-bordeaux);
+  padding: 22px 26px;
+}
+
+.disclaimer-alert-icon {
+  font-size: 34px;
+  line-height: 1;
+  color: var(--tr-bordeaux);
+  flex-shrink: 0;
+}
+
+.disclaimer-alert-titre {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--tr-bordeaux);
+}
+
+.disclaimer-liste {
+  padding-left: 1.2rem;
+}
+
+.disclaimer-liste li {
+  margin-bottom: 8px;
 }
