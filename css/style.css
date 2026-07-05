@@ -438,6 +438,12 @@ a {
 }
 
 /* Cartes de la page d'accueil */
+/* Meme valeur que le padding de .section-claire : l'espace au-dessus des cartes
+   (ce margin-top) egale ainsi l'espace en dessous (le padding-bottom de la section). */
+.cartes-accueil {
+  margin-top: 64px;
+}
+
 .card .card-img-top {
   height: 220px;
   object-fit: cover;
@@ -710,4 +716,42 @@ a {
 
 .disclaimer-liste li {
   margin-bottom: 8px;
+}
+
+.doc-card {
+  height: 100%;
+  padding: 22px 24px;
+  background: rgba(140, 47, 57, 0.04);
+  border: 1px solid rgba(140, 47, 57, 0.3);
+  border-left: 4px solid var(--tr-bordeaux);
+}
+
+.doc-card-titre {
+  font-family: 'Pirata One', cursive;
+  font-size: 1.6rem;
+  color: var(--tr-bordeaux);
+  margin-bottom: 8px;
+}
+
+.doc-card-texte {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.btn-doc {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--tr-bordeaux);
+  border: 1px solid var(--tr-bordeaux);
+  padding: 8px 18px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-doc:hover {
+  background-color: var(--tr-bordeaux);
+  color: #fff;
 }
