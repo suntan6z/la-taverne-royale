@@ -3,10 +3,8 @@
    - Bordeaux (Stiletto)      #8C2F39  couleur principale
    - Noir                     #000000  texte courant
    - Gris clair (Gray Nurse)  #E1E6E1  fonds clairs / surfaces
-   - Bleu (Matisse)           #2176AE  accent (navbar, footer, liens), a utiliser avec parcimonie
-
-   Hors charte : beige chaud utilise pour le fond du body/des sections claires,
-   pour mieux se marier avec la navbar blanche (le gris-vert d'origine faisait un raccord trop froid).
+   - Beige                    #F3EFE6  declinaison navbar
+   - Bleu (Matisse)           #2176AE  accent (pied de page), a utiliser avec parcimonie
 */
 
 /* ===== Polices en local (pas de CDN Google Fonts) ===== */
@@ -437,6 +435,17 @@ a {
   color: #fff;
 }
 
+/* Modal des publications Instagram */
+.insta-modal-content {
+  border-top: 4px solid var(--tr-bordeaux);
+}
+
+.insta-post-img {
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
 /* Cartes de la page d'accueil */
 /* Meme valeur que le padding de .section-claire : l'espace au-dessus des cartes
    (ce margin-top) egale ainsi l'espace en dessous (le padding-bottom de la section). */
@@ -655,6 +664,18 @@ a {
 }
 
 /* ===== Page de confirmation — récapitulatif ===== */
+.confirm-eyebrow {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.confirm-message {
+  max-width: 620px;
+}
+
+.recap-titre {
+  font-size: 28px;
+}
+
 .recap-resa {
   max-width: 520px;
   margin: 0 auto;

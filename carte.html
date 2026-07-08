@@ -258,7 +258,7 @@
         <a href="#" title="Facebook">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
         </a>
-        <a href="#" title="Instagram">
+        <a href="#" title="Instagram" data-bs-toggle="modal" data-bs-target="#instagramModal">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"></line></svg>
         </a>
       </div>
@@ -268,6 +268,24 @@
       <p class="footer-disclaimer mb-0 mt-1"><a href="disclaimer.html">⚠ Restaurant fictif — projet étudiant. En savoir plus</a></p>
     </div>
   </footer>
+
+  <!-- Modal des publications Instagram -->
+  <div class="modal fade" id="instagramModal" tabindex="-1" aria-labelledby="instagramModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content insta-modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title font-titre" id="instagramModalLabel">Nos publications Instagram</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column align-items-center gap-4">
+            <img src="images/post-instagram-1.png" alt="Publication Instagram 1 — La Taverne Royale" class="img-fluid rounded insta-post-img">
+            <img src="images/post-instagram-2.png" alt="Publication Instagram 2 — La Taverne Royale" class="img-fluid rounded insta-post-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>

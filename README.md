@@ -50,7 +50,9 @@ la-taverne-royale/
 ├── images/             <- Images du site
 │
 ├── assets/
-│   └── fonts/           <- Polices en local (Pirata One, Roboto Condensed)
+│   ├── logo.png / logo.svg               <- Logo principal
+│   ├── logo-couronne.png / .svg          <- Logo utilisé dans la navbar
+│   └── fonts/                            <- Polices en local (Pirata One, Roboto Condensed)
 │
 └── docs/                <- Fiche identité, moodboard, maquette, planning, brief
 ```
@@ -67,15 +69,16 @@ partout via des variables CSS et des classes. Pas de couleur "en dur" dans les p
 
 ### Couleurs
 
-Le bordeaux est la couleur principale ; le bleu est un accent, employé avec parcimonie (navbar,
-footer, liens, éléments interactifs).
+Le bordeaux est la couleur principale ; le bleu est un accent, employé avec parcimonie (pied de
+page uniquement).
 
 | Nom | Code | Variable CSS | Usage |
 |---|---|---|---|
 | Bordeaux (Stiletto) | `#8C2F39` | `--tr-bordeaux` | Couleur principale : en-têtes, titres, boutons |
 | Noir | `#000000` | `--tr-noir` | Texte courant, contrastes |
 | Gris clair (Gray Nurse) | `#E1E6E1` | `--tr-gris-clair` | Fonds clairs, surfaces |
-| Bleu (Matisse) | `#2176AE` | `--tr-bleu` | Accent : navbar, footer, liens |
+| Beige | `#F3EFE6` | `--tr-beige` | Déclinaison navbar |
+| Bleu (Matisse) | `#2176AE` | `--tr-bleu` | Accent : pied de page |
 
 ### Polices
 
