@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Cette page n'existe pas ou plus sur le site de La Taverne Royale.">
+  <link rel="icon" type="image/png" href="assets/logo-couronne.png">
+  <title>La Taverne Royale — Page introuvable</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .erreur-404 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 96px 24px;
+      min-height: 50vh;
+    }
+    .erreur-404-code {
+      font-size: 120px;
+      line-height: 1;
+      color: var(--tr-bordeaux);
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- En-tête : navbar + bandeau décoratif, fixes ensemble au scroll -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-taverne py-0">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+          <img src="assets/logo-couronne.svg" alt="La Taverne Royale" width="54" height="54" class="rounded-circle">
+          <span>
+            <span class="d-block font-titre fs-4 lh-1">La Taverne Royale</span>
+            <span class="d-block sous-titre-nav">Ici, chaque convive est roi</span>
+          </span>
+        </a>
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="concept.html">Concept</a></li>
+            <li class="nav-item"><a class="nav-link" href="carte.html">À la Carte</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn-reserver d-inline-block" href="reservation.html">Réserver</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bandeau décoratif -->
+    <div class="bandeau-deco"></div>
+  </header>
+
+  <!-- Contenu 404 -->
+  <main class="flex-grow-1 section-claire">
+    <div class="erreur-404">
+      <p class="font-titre erreur-404-code mb-0">404</p>
+      <h1 class="font-titre titre-section mt-2">Cette table n'existe pas</h1>
+      <p class="concept-text" style="max-width: 480px;">
+        La page que vous cherchez a été déplacée, renommée, ou n'a jamais existé.
+        Retournez à l'accueil pour poursuivre votre visite.
+      </p>
+      <a href="index.html" class="btn-reserver d-inline-block mt-3">Retour à l'accueil</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-taverne">
+    <div class="container d-flex justify-content-center gap-3 pb-2 border-bottom">
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" title="Facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="#" title="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"></line></svg>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-2">
+      <p class="footer-copyright mb-0">© 2026 La Taverne Royale — Tous droits réservés · 14 rue de la Bretagne, 76600 Le Havre</p>
+      <p class="footer-disclaimer mb-0 mt-1"><a href="disclaimer.html">⚠ Restaurant fictif — projet étudiant. En savoir plus</a></p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
